@@ -1,0 +1,13 @@
+version: '2'
+services:
+  app:
+    image: 363651874926.dkr.ecr.us-east-2.amazonaws.com/notes-on-rails:latest
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    ports:
+      - "80:3000"
+    environment:
+      DB_NAME: notes
+      DB_USER: notemaker
+      DB_PASSWORD: password123
+      DB_HOST: nd8c7hb37uzlwb.cn5qwzqktffi.us-west-2.rds.amazonaws.com
+      
